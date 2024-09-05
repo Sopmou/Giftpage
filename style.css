@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Sevillana&display=swap');
+
+* {
+    font-family: "Sevillana", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #274d3d;
+    color: white;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: #2f5f4c;
+    padding: 20px;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 20px 0px;
+    color: #fff;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+}
+
+.category-section {
+    margin: 40px 0;
+}
+
+.category-section h2 {
+    font-size: 1.6rem;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 100%; /* Make sure the container spans the full width */
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #eaece5;
+    border-radius: 10px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 25%; /* Default for desktop */
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.slide img {
+    width: 100%;
+    height: 250px; /* Feste Höhe für alle Bilder */
+    object-fit: cover; /* Bilder proportional zuschneiden */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slide h3 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-controls button {
+    background-color: #4CAF50;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    border-radius: 50%;
+}
+
+.slider-controls button:hover {
+    background-color: #45a049;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablets */
+@media (max-width: 768px) {
+    .slide {
+        min-width: 33.33%; /* 3 slides visible */
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobile Phones */
+@media (max-width: 480px) {
+    .slide {
+        min-width: 100%; /* 1 slide visible on mobile to prevent gaps */
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    .slide h3 {
+        font-size: 1rem;
+    }
+}
